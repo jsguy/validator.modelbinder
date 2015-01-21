@@ -46,6 +46,8 @@ module.exports = {
 	bind: function(self, vObj){
 		return function(name){
 			var result = {},
+				tmp,
+				hasInvalidField = false,
 				//	For some reason node-validator doesn't have this...
 				isNotEmpty = function(value){
 					return typeof value !== "undefined" && value !== "" && value !== null;
@@ -85,7 +87,14 @@ module.exports = {
 			} else {
 				//	Validate the whole model
 				for(name in vObj) {
-					result[name] = validate(name, getValue(name), vObj[name]);
+					tmp = validate(name, getValue(name), vObj[name]);
+					if(tmp !== true) {
+						hasInvalidField = true;
+					}
+					result[name] = tmp;
+				}
+				if(!hasInvalidField) {
+					result = true;
 				}
 			}
 
