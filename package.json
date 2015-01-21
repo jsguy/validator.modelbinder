@@ -1,0 +1,23 @@
+{
+  "name": "validator.modelbinder",
+  "version": "0.0.1",
+  "description": "Model binder for validator",
+  "main": "index.js",
+  "dependencies": {
+    "validator": "^3.27.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsguy/validator.modelbinder.git"
+  },
+  "author": "Mikkel Bergmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsguy/validator.modelbinder/issues"
+  },
+  "homepage": "https://github.com/jsguy/validator.modelbinder"
+}
