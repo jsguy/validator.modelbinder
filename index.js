@@ -89,8 +89,6 @@ module.exports = {
 				}
 			}
 
-			console.log('validate', name, result);
-
 			return result;
 		}
 	}
