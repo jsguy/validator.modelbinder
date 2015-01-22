@@ -58,6 +58,10 @@ module.exports = {
 				},
 				//	Validates a value against a set of validations
 				//	Returns true if the value is valid, or an object 
+				//	TODO: Would be nice if we could return a falsy 
+				//		value instead of object, but how do they then
+				//		get the error messages?
+				//	
 				validate = function(name, value, validations) {
 					var validation,
 						tmp,
